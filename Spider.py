@@ -40,7 +40,7 @@ def  get_img2(html):
             num += 1
             print('download %s pic' % num)
 
-
+#爬取豆瓣图片
 for i in range(0,100,20):
     print('page:', i)
     url = 'https://movie.douban.com/j/search_subjects?type=tv&tag=%E7%83%AD%E9%97%A8&sort=recommend&page_limit=20&page_start='+ repr(i)
