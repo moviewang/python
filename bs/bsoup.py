@@ -8,7 +8,7 @@ html = """
 <p class="story">Once upon a time there were three little sisters; and their names were
 <a href="http://example.com/elsie" class="sister" id="link1"><!-- Elsie --></a>,
 <a href="http://example.com/lacie" class="sister" id="link2">Lacie</a> and
-<a href="http://example.com/tillie" class="sister" id="link3">Tillie</a>;
+<a href="http://example.com/tillie" class="sister" id="link3" target="_blank">Tillie</a>;
 and they lived at the bottom of a well.</p>
 <p class="story">...</p>
 """
@@ -50,8 +50,10 @@ soup_comment = BeautifulSoup(comment, 'lxml')
 print('comment:', soup_comment.a.prettify())
 print(soup_comment.a.string)
 print(soup.a.string)
+print(soup.find_all('a'))
 
 # if type(soup_comment.a.string) == bs4.elem
 
-
+url = ' http://www.x23us.com/class/1_'
+print(url[url.rfind('/') + 1 : url.rfind('_')])
 
